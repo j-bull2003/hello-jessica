@@ -1,5 +1,4 @@
 'use client';
-import HamburgerMenu from './Components/HamburgerMenu';
 import React, { useState } from 'react';
 
 interface TodoItem {
@@ -7,7 +6,7 @@ interface TodoItem {
     value: string;
 }
 
-const App = () => {
+const Page = () => {
     const [userInput, setUserInput] = useState('');
     const [list, setList] = useState<TodoItem[]>([]);
     const [editIndex, setEditIndex] = useState<number | null>(null); // Track index of item to edit
@@ -60,7 +59,7 @@ const App = () => {
                 margin: '0 auto',
                 padding: '20px',
             }}
-        ><HamburgerMenu />
+        >
             <div
                 style={{
                     textAlign: 'center',
@@ -173,4 +172,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Page;
